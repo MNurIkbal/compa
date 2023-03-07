@@ -113,12 +113,14 @@ echo form_open_multipart(base_url('admin/berita/edit/'.$berita->id_berita));
 </div>
 
 <div class="form-group">
-<label>Isi berita <sup>
+<label>Isi berita 
+  <!-- <sup>
 		<a data-toggle="modal" class="btn btn-info btn-xs" href="<?php echo base_url('admin/berita/files') ?>" data-target="#file"><i class="fa fa-download"></i> Attach File</a>
 
 		<a data-toggle="modal" class="btn btn-info btn-xs" href="<?php echo base_url('admin/berita/gambar') ?>" data-target="#gambar"><i class="fa fa-download"></i> Attach Gambar</a>
 
-	</sup></label>
+	</sup> -->
+</label>
 <textarea name="isi" class="form-control" id="isi" placeholder="Isi berita" placeholder="Isi berita"><?php echo $berita->isi ?></textarea>
 </div>
 

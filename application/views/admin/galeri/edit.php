@@ -52,8 +52,8 @@ echo form_open_multipart(base_url('admin/galeri/edit/'.$galeri->id_galeri));
 	<option value="Homepage" 
 	<?php if($galeri->jenis_galeri=="Homepage") { echo "selected"; } ?>
 	>Homepage - Gambar Slider</option>
-  	<option value="Pop up" <?php if($galeri->jenis_galeri=="Pop up") { echo "selected"; } ?>>Pop up Homepage</option>
-  	<option value="Testimonial" <?php if($galeri->jenis_galeri=="Testimonial") { echo "selected"; } ?>>Background Testimonial</option>
+  	<!-- <option value="Pop up" <?php if($galeri->jenis_galeri=="Pop up") { echo "selected"; } ?>>Pop up Homepage</option>
+  	<option value="Testimonial" <?php if($galeri->jenis_galeri=="Testimonial") { echo "selected"; } ?>>Background Testimonial</option> -->
 </select>
 
 </div>

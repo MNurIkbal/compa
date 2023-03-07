@@ -7,7 +7,6 @@
         </div>
         <!-- .section-header -->
         <div class="row">
-
           <style type="text/css" media="screen">
           th, td {
             text-align: left !important;

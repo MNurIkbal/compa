@@ -176,9 +176,10 @@
               </li>
               <li class="nav-item"><a href="<?php echo base_url('admin/konfigurasi/logo') ?>" class="nav-link"><i class="fa fa-home nav-icon"></i><p>Ganti Logo</p></a>
               </li>
+              
 
-              <li class="nav-item"><a href="<?php echo base_url('admin/konfigurasi/footer') ?>" class="nav-link"><i class="fa fa-home nav-icon"></i><p>Ganti Gambar Footer</p></a>
-              </li>
+              <!-- <li class="nav-item"><a href="<?php echo base_url('admin/konfigurasi/footer') ?>" class="nav-link"><i class="fa fa-home nav-icon"></i><p>Ganti Gambar Footer</p></a>
+              </li> -->
               <li class="nav-item"><a href="<?php echo base_url('admin/konfigurasi/icon') ?>" class="nav-link"><i class="fa fa-upload nav-icon"></i><p>Ganti Icon</p></a>
               </li>
             </ul>

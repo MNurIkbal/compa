@@ -66,12 +66,14 @@ class Video extends CI_Controller {
 			$data = array(	'judul'			=> $i->post('judul'),
 							'posisi'		=> $i->post('posisi'),
 							'keterangan'	=> $i->post('keterangan'),
-							'video'			=> $i->post('video'),
+							'video'			=> (!empty($i->post('video'))) ? $i->post('video') : null,
 							'urutan'		=> $i->post('urutan'),
 							'id_user'		=> $this->session->userdata('id_user'),
-							'bahasa'		=> $i->post('bahasa')
+							'bahasa'		=> $i->post('bahasa'),
+							'type'			=>	$i->post('type')
 							);
 			$this->video_model->tambah($data);
+			
 			$this->session->set_flashdata('sukses','Data added successfully');
 			redirect(base_url('admin/video'));
 		}

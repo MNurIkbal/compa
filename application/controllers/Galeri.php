@@ -106,10 +106,12 @@ class Galeri extends CI_Controller {
 		$site 		= $this->konfigurasi_model->listing();
 		$galeri 	= $this->galeri_model->detail($id_galeri);
 		$listing 	= $this->galeri_model->galeri_home();
+		
+		
 
-		if(count($galeri) < 1) {
-			redirect(base_url('oops'),'refresh');
-		}
+		// if(count($galeri) < 1) {
+		// 	redirect(base_url('oops'),'refresh');
+		// }
 		
 		// Update hit
 		if($galeri) {

@@ -48,7 +48,7 @@ echo validation_errors('<div class="alert alert-success">','</div>');
      <div class="form-group">
     	<label>Posisi Video</label>
         <select name="posisi" class="form-control">
-        	<option value="Homepage" <?php if($video->posisi=="Homepage") { echo "selected"; } ?>>Homepage - Main page</option>
+        	<!-- <option value="Homepage" <?php if($video->posisi=="Homepage") { echo "selected"; } ?>>Homepage - Main page</option> -->
             <option value="Video" <?php if($video->posisi=="Video") { echo "selected"; } ?>>Video - Video page</option>
         </select>
     </div>

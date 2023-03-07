@@ -58,7 +58,7 @@ echo form_open(base_url('admin/galeri/proses'));
         Urutan: <?php echo $galeri->urutan ?>
       <br>
       Status Tampil Teks: <?php echo $galeri->status_text ?><br>
-      <textarea name="aa"><?php echo base_url('assets/upload/image/'.$galeri->gambar) ?></textarea>
+      
       </small>
 
     </td>
@@ -68,8 +68,8 @@ echo form_open(base_url('admin/galeri/proses'));
     <td><?php echo $galeri->tanggal ?></td>
     <td>
       <div class="btn-group">
-      <a href="<?php echo base_url('galeri/read/'.$galeri->id_galeri) ?>" 
-      class="btn btn-success btn-xs" target="_blank"><i class="fa fa-eye"></i></a>
+      <!-- <a href="<?php echo base_url('galeri/read/'.$galeri->id_galeri) ?>" 
+      class="btn btn-success btn-xs" target="_blank"><i class="fa fa-eye"></i></a> -->
 
       <a href="<?php echo base_url('admin/galeri/edit/'.$galeri->id_galeri) ?>" 
       class="btn btn-warning btn-xs"><i class="fa fa-edit"></i></a>
