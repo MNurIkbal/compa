@@ -149,8 +149,10 @@ swal({
   <!-- /.content-wrapper -->
   <footer class="main-footer">
    
-    
-    <strong>Copyright &copy; <?= date("Y"); ?> <?= $site->namaweb; ?>
+    <?php 
+    $e = $this->db->query("SELECT * FROM konfigurasi")->row_array();
+    ?>
+    <strong>Copyright &copy; <?= date("Y"); ?> <?= $e['namaweb']; ?> </strong>
   </footer>
 
   <!-- Control Sidebar -->

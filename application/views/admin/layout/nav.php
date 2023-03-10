@@ -130,6 +130,14 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="<?php echo base_url('admin/kontak') ?>" class="nav-link">
+              <i class="nav-icon fa fa-envelope "></i>
+              <p>
+                KONTAK
+              </p>
+            </a>
+          </li>
           <?php if($this->session->userdata('akses_level')=="Admin") { ?>
           <!-- STAFF -->
           <li class="nav-item has-treeview">
@@ -170,8 +178,8 @@
               
               <li class="nav-item"><a href="<?php echo base_url('admin/konfigurasi') ?>" class="nav-link"><i class="fa fa-wrench nav-icon"></i><p>Konfigurasi Umum</p></a>
               </li>
-              <li class="nav-item"><a href="<?php echo base_url('admin/konfigurasi/direktur') ?>" class="nav-link"><i class="fa fa-sitemap nav-icon"></i><p>Update Data Pejabat</p></a>
-              </li>
+              <!-- <li class="nav-item"><a href="<?php echo base_url('admin/konfigurasi/direktur') ?>" class="nav-link"><i class="fa fa-sitemap nav-icon"></i><p>Update Data Pejabat</p></a>
+              </li> -->
                <li class="nav-item"><a href="<?php echo base_url('admin/konfigurasi/email_setting') ?>" class="nav-link"><i class="fa fa-sitemap nav-icon"></i><p>Email Setting</p></a>
               </li>
               <li class="nav-item"><a href="<?php echo base_url('admin/konfigurasi/logo') ?>" class="nav-link"><i class="fa fa-home nav-icon"></i><p>Ganti Logo</p></a>

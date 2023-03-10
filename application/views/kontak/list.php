@@ -6,27 +6,31 @@
                 <div class="row">
                     <div class="col-md-8">
                         <h3 class="contact-title">HUBUNGI KAMI</h3>
-                        <form action="#" method="POST" class="contact-form">
+                        <?php $messages = $this->session->flashdata('sukses');
+ if(!empty($messages)) : ?>
+ <div class="alert alert-success">Data Berhasil Dikirim</div>
+ <?php endif; ?>
+                        <form action="<?= base_url("Kontak/kirim"); ?>" method="POST" class="contact-form">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="nameId" name="name" placeholder="Full Name">
+                                        <input type="text" class="form-control" id="nameId" name="nama" placeholder="Full Name" required>
                                     </div>
                                     <!-- .form-group -->
                                 </div>
                                 <!-- .col-md-6 -->
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" id="emailId" name="email" placeholder="Email Address">
+                                        <input type="email" class="form-control" id="emailId" name="email" placeholder="Email Address" required>
                                     </div>
                                 </div>
                                 <!-- .col-md-6 -->
                             </div>
                             <!-- .row -->
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <input type="text" class="form-control" id="subjectId" name="subject" placeholder="Subject">
-                            </div>
-                            <textarea class="form-control text-area" rows="3" placeholder="Message"></textarea>
+                            </div> -->
+                            <textarea class="form-control text-area" rows="3" placeholder="Message" name="pesan" required></textarea>
                             <button type="submit" class="btn btn-default">Send Email</button>
                         </form>
                     </div>
@@ -51,7 +55,7 @@
                                 <i class="flaticon-message"></i>
                                 <div class="contact-content">
                                     <p><?php echo $site->email; ?></p>
-                                    <p><?php echo $site->email_cadangan; ?></p>
+                                    <!-- <p><?php echo $site->email_cadangan; ?></p> -->
                                 </div>
                             </li>
                         </ul>
@@ -60,7 +64,7 @@
                             <li><a href="<?php echo $site->facebook; ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                             <li><a href="<?php echo $site->twitter; ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                             <li><a href="<?php echo $site->instagram; ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                            <li><a href="<?php echo $site->google_plus; ?>"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+                            <!-- <li><a href="<?php echo $site->google_plus; ?>"><i class="fa fa-google" aria-hidden="true"></i></a></li> -->
                         </ul>
                     </div>
                     <!-- .col-md-4 -->
