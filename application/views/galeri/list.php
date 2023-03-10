@@ -23,7 +23,7 @@
                                             <a href="<?php echo base_url('assets/upload/image/'.$galeri->gambar) ?>" data-rel="lightcase:myCollection"><i class="fa fa-plus" aria-hidden="true"></i></a>
                                         </div>
                                         <div class="recent-project-content">
-                                            <p><a href="#"><?php echo $galeri->judul_galeri; ?></a></p>
+                                            <p><a href="#"></a></p>
                                         </div>
                                         <!-- .latest-port-content -->
                                     </div>

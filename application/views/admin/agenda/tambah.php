@@ -76,10 +76,6 @@
           <td><textarea name="isi" id="isi" cols="50" rows="5" class="ckeditor form-control" placeholder="Deskripsi lengkap"><?php echo set_value('isi') ?></textarea></td>
         </tr>
         <tr valign="baseline">
-          <td nowrap align="right" valign="top">Upload Gambar</td>
-          <td><textarea name="isi" id="isi" cols="50" rows="5" class="ckeditor form-control" placeholder="Deskripsi lengkap"><?php echo set_value('isi') ?></textarea></td>
-        </tr>
-        <tr valign="baseline">
           <td nowrap align="right">&nbsp;</td>
           <td><input name="Submit" type="submit" class="btn btn-primary btn-lg"  value="Simpan data agenda">
           <input name="Submit2" type="reset" class="btn btn-primary btn-lg"  value="Reset">

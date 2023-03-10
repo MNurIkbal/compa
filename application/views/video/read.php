@@ -10,7 +10,8 @@
               <p><?php echo nl2br($video->keterangan) ?></p>
               <hr>
               <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo $video->video ?>"></iframe>
+                <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo $video->video ?>"></iframe> -->
+                  <video src="<?= base_url("assets/upload/" . $video->video); ?>" controls ></video>
               </div>
              <!-- .single-event-content -->
             </div>

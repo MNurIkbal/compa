@@ -17,7 +17,7 @@ if(isset($error)) {
 echo validation_errors('<div class="alert alert-success">','</div>'); 
 ?>
 
-<?php echo form_open(base_url('admin/video/edit/'.$video->id_video)) ?>
+<?php echo form_open(base_url('admin/video/edit/'.$video->id_video) , array('enctype' => 'multipart/form-data')) ?>
 <div class="row">
 <div class="col-md-6">
 	<div class="form-group input-group-lg">
@@ -25,6 +25,7 @@ echo validation_errors('<div class="alert alert-success">','</div>');
         <input type="text" name="judul" class="form-control" value="<?php echo $video->judul ?>" required placeholder="Judul Video">
     </div>  
 </div>
+<input type="hidden" name="file_lama" value="<?= $video->video; ?>">
 
 <div class="col-md-3">
 	<div class="form-group">
@@ -61,7 +62,7 @@ echo validation_errors('<div class="alert alert-success">','</div>');
 
 <div class="col-md-6">
 	
-    <div class="form-group">
+    <!-- <div class="form-group">
         <label>Kode Video dari Youtube</label>
       <input type="text" name="video" required class="form-control" placeholder="Kode video dari Youtube" value="<?php echo $video->video ?>">
     </div>
@@ -71,8 +72,14 @@ echo validation_errors('<div class="alert alert-success">','</div>');
       	<a href="<?php echo base_url('assets/images/youtube.jpg') ?>" target="_blank">
         <img src="<?php echo base_url('assets/images/youtube.jpg') ?>" class="img-responsive img-thumbnail">
         </a>
-	</div>
-
+	</div> -->
+    <div class="file">
+            <div class="form-group">
+                <label for="">File Vidio</label>
+                <input type="file" name="upload" class="form-control">
+                <small>Extensi yang di perbolehkan Mp4</small>
+            </div>
+        </div>
     <div class="form-group">
     <input type="submit" name="submit" value="Save Video" class="btn btn-success btn-lg">
     <input type="reset" name="reset" value="Reset" class="btn btn-primary btn-lg">

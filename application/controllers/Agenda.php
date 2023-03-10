@@ -86,6 +86,17 @@ class Agenda extends CI_Controller {
 					);
 		$this->load->view('layout/wrapper',$data);
 	}
+
+	public function agenda_list()
+	{
+		$agenda = $this->agenda_model->home();
+		$data = array(
+			'title' 	=> "Agenda",
+			'agenda'	=> $agenda,
+			'isi'		=> 'agenda/view_agenda'
+			);
+$this->load->view('layout/wrapper',$data);
+	}
 	
 	// View agenda
 	public function view($id_agenda) {

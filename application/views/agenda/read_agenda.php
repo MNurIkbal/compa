@@ -3,7 +3,7 @@
 <div class="container">
 <div class="row">
     <div class="col-md-12">
-        <h1><?php echo $title ?></h1>
+        <h1 style="color: black !important;"><?php echo $title ?></h1>
     </div><!-- End .col-md-6 -->
 </div><!-- End .row -->
 </div><!-- End .container -->
@@ -32,7 +32,7 @@ th {
 	background-color: #ffc;
 }
 .agendaku .tanggal {
-	background-color: #FFF;
+	/* background-color: #FFF; */
 	padding: 10px;
 	font-weight: bold;
 	border-bottom: solid thin #EEE;
@@ -95,15 +95,17 @@ h4.judul {
 </div><!-- .content -->
  
  
- <div id="sidebar" class="sidebar col-md-4">
+ <div id="sidebar" class="sidebar col-md-4 ">
+	<br>
 		<aside class="widget list">
 		  <header>
-			<h3 class="title">Agenda lainnya</h3>
-		  </header>               
+			<h3 class="title" style="color: black !important;">Agenda lainnya</h3>
+		</header>               
+		<br>
               <ul class="list-link bot-40">
         
 				<?php foreach($agenda as $agenda) { ?>
-				<li>
+				<li style="margin-bottom: 20px;">
                 <div class="col-md-4">
                     <div class="agendaku">
                     <a href="<?php echo base_url('agenda/detail/'.$agenda['id_agenda']) ?>">
@@ -130,12 +132,12 @@ h4.judul {
 			</ul>
 
  </aside><!-- .list -->
-		
-		
-	  </div><!-- .sidebar -->
-    </div><!-- End .row -->
+ 
+</div><!-- .sidebar -->
+</div><!-- End .row -->
 </div><!-- End .container -->
 
+<br>
 <div class="mb20"></div><!-- space -->
 
 </div><!-- End #content -->

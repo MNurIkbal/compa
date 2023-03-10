@@ -1,3 +1,0 @@
-PANDUAN SETUP & INSTALASI
-1. Installasi di Localhost: https://bit.ly/32GVPAu
-2. Installasi di Hosting: https://bit.ly/2UiLGoS

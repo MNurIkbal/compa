@@ -71,13 +71,11 @@ $nav_profil     = $this->nav_model->nav_profil();
                     <div class="widgets-title">
                         <h4 style="color:white;"><?php echo $site->namaweb ?></h4>
                     </div>
-                
-                    <!-- .widgets-content -->
-                    <div class="address-box">
+                                    <div class="address-box">
                         <ul class="address">
                             <li>
                                 <i class="fa fa-home" aria-hidden="true"></i>
-                                <span><?php echo nl2br($site->alamat) ?></span>
+                                <span style="color: white !important;"><?php echo nl2br($site->alamat) ?></span>
                             </li>
                             <li>
                                 <i class="fa fa-phone" aria-hidden="true"></i>
@@ -86,7 +84,6 @@ $nav_profil     = $this->nav_model->nav_profil();
                             <li>
                                 <i class="fa fa-envelope-o" aria-hidden="true"></i>
                                 <span><?php echo $site->email ?></span>
-
                             </li>
                         </ul>
                     </div>
@@ -100,7 +97,6 @@ $nav_profil     = $this->nav_model->nav_profil();
                     <div class="widgets-title">
                         <h3>Latest News</h3>
                     </div>
-                    <!-- .widgets-title -->
                     <ul class="latest-news">
                         <?php foreach($nav_profil as $nav_profil) { ?>
                         <li>
@@ -114,12 +110,10 @@ $nav_profil     = $this->nav_model->nav_profil();
                             <div class="thumbnail-content">
                                 <h5><a href="<?php echo base_url('berita/profil/'.$nav_profil->slug_berita) ?>"><?php echo $nav_profil->judul_berita ?></a></h5>
                             </div>
-                            <!-- .thumbnail-content -->
                         </li>
                         <?php } ?>
                     </ul>
                 </div>
-                <!-- .footer-widgets -->
             </div>
             
             
@@ -141,7 +135,6 @@ $nav_profil     = $this->nav_model->nav_profil();
         <div class="copyright-txt">
             <p>&copy; <?php echo date('Y') ?>. Designer By <a href="http://javawebmedia.com" title="Java Web Media">Java Web Media</a></p>
         </div>
-        <!-- .copyright-txt -->
         <div class="social-box">
             <ul class="social-icon-rounded">
                 <li><a href="<?php echo $site->facebook ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>

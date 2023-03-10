@@ -11,7 +11,8 @@
                                 <div class="event-items">
                                     <div class="event-img">
                                         <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo $video->video ?>"></iframe>
+                <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo $video->video ?>"></iframe> -->
+                    <video src="<?= base_url("assets/upload/" . $video->video); ?>" controls ></video>
               </div>
                                         <div class="date-box">
                                             <h3><?php echo date('d', strtotime($video->tanggal)); ?></h3>

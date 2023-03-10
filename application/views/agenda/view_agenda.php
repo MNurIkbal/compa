@@ -8,7 +8,8 @@
 	background-color: #ffc;
 }
 .agendaku .tanggal {
-	background-color: #FFF;
+	/* background-color: #FFF; */
+	cursor: pointer;
 	padding: 30px 20px;
 	font-weight: bold;
 	border-bottom: solid thin #EEE;
@@ -31,22 +32,16 @@ h4.judul {
 	text-transform: uppercase;
 }
 </style>
+
 <div id="content" role="main">
-<div class="page-header dark larger larger-desc">
-<div class="container">
-<div class="row">
-    <div class="col-md-12">
-        <h1><?php echo $title ?></h1>
-    </div><!-- End .col-md-6 -->
-</div><!-- End .row -->
-</div><!-- End .container -->
-</div><!-- End .page-header -->
-
-<div class="mb40"></div><!-- space -->
-
-<div class="container">
-<div class="row">
-
+	
+	
+	<div class="container">
+		<div class="row">
+			<br>
+			<h2>Agenda</h3>
+			<br>
+	
 	  <?php foreach($agenda as $agenda) { ?>
 	  <div class="col-md-4 rel text-center">
           <div class="agendaku">
@@ -62,7 +57,7 @@ h4.judul {
             
 			<h4 class="title judul" data-appear-animation="bounceInLeft">
 			<a href="<?php echo base_url('agenda/detail/'.$agenda->id_agenda) ?>">
-			<?php echo $agenda->nama ?> <sup><i class="fa fa-eye"></i></sup></a></h4>
+			<?php echo $agenda->nama ?> </a></h4>
 			<div class="text-small" data-appear-animation="bounceInLeft">
 			  <?php echo character_limiter($agenda->ringkasan,200) ?>
 			  <div class="clearfix"></div><br>

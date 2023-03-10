@@ -22,6 +22,15 @@ class Client_model extends CI_Model {
 		return $query->result();
 	}
 
+	public function result()
+	{
+		$this->db->select('*');
+		$this->db->from('client');
+		$this->db->order_by('id_client', 'desc');
+		$query = $this->db->get();
+		return $query->result();
+	}
+
 	// Total
 	public function total($jenis_client = FALSE)
 	{

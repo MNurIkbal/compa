@@ -39,7 +39,13 @@ echo form_open(base_url('admin/video/proses'));
             <span class="checkmark"></span>
           </div>
         </td>
-        <td class="video"> <iframe src="https://www.youtube.com/embed/<?php echo $video->video ?>"></iframe></td>
+        <td class="video"> 
+        <!-- <iframe src="https://www.youtube.com/embed/<?php echo $video->video ?>"></iframe> -->
+            <?php if(!empty($video->video)) : ?>
+                <video src="<?= base_url("assets/upload/" . $video->video); ?>" controls width="300" height="150"></video>
+                <?php else: ?>
+                    <?php endif; ?>
+        </td>
         <td>
 		<?php echo $video->judul ?> - <?php echo $video->urutan ?>
         <!-- <sup><a href="<?php echo base_url('video/detail/'.$video->id_video) ?>"><i class="fa fa-link"></i></a></sup> -->

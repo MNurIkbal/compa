@@ -71,9 +71,18 @@ $nav_layanan                = $this->nav_model->nav_layanan();
                     <li class="sub-active"><a href="<?php echo base_url('video'); ?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Galeri Video</a></li>                   
                 </ul>
             </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Kegiatan <span class="caret"></span></a>
+                <ul class="dropdown-menu sub-menu">
+                    
+                    <li class="sub-active"><a href="<?php echo base_url('Agenda/agenda_list'); ?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Agenda</a></li>
+                    <li class="sub-active"><a href="<?php echo base_url('Mitra'); ?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Mitra Kerja Sama</a></li>                   
+                </ul>
+            </li>
             
 
             <!-- DOWNLOAD -->
+            
             <li><a href="<?php echo base_url('download') ?>">UNDUHAN</a></li>
             
             <!-- kontak  -->

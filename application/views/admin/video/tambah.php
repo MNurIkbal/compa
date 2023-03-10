@@ -16,7 +16,8 @@ if (isset($error)) {
 // Error
 echo validation_errors('<div class="alert alert-success">', '</div>');
 
-echo form_open(base_url('admin/video/tambah'));
+echo form_open(base_url('admin/video/tambah'), array('enctype' => 'multipart/form-data'));
+
 ?>
 
 <div class="row">
@@ -78,8 +79,9 @@ echo form_open(base_url('admin/video/tambah'));
         </div> -->
         <div class="file">
             <div class="form-group">
-                <label for="">File</label>
-                <input type="file" name="upload" class="form-control">
+                <label for="">File Vidio</label>
+                <input type="file" name="upload" class="form-control" required>
+                <small>Extensi yang di perbolehkan Mp4</small>
             </div>
         </div>
 
