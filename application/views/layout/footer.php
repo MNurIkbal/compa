@@ -75,7 +75,8 @@ $nav_profil     = $this->nav_model->nav_profil();
                         <ul class="address">
                             <li>
                                 <i class="fa fa-home" aria-hidden="true"></i>
-                                <span style="color: white !important;"><?php echo nl2br($site->alamat) ?></span>
+                                <span style="color:white !important">
+                                  <?php echo nl2br($site->alamat) ?></span>
                             </li>
                             <li>
                                 <i class="fa fa-phone" aria-hidden="true"></i>
@@ -133,7 +134,7 @@ $nav_profil     = $this->nav_model->nav_profil();
 <div class="row">
     <div class="footer-bottom">
         <div class="copyright-txt">
-            <p>&copy; <?php echo date('Y') ?>. Designer By <a href="http://javawebmedia.com" title="Java Web Media">Java Web Media</a></p>
+            <p>&copy; <?php echo date('Y') ?>. <?= $site->namaweb; ?></a></p>
         </div>
         <div class="social-box">
             <ul class="social-icon-rounded">
