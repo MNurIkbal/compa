@@ -25,6 +25,7 @@ class Home extends CI_Controller {
 		$agenda 		= $this->agenda_model->home();
 		$layanan 		= $this->nav_model->nav_layanan();
 		$profil 		= $this->nav_model->nav_profil();
+		$video_testimoni = $this->db->query("SELECT * FROM vidio_testimoni")->row_array();
 
 		// Berita dan paginasi
 		$this->load->library('pagination');
@@ -71,6 +72,7 @@ class Home extends CI_Controller {
 						'pagin' 			=> $this->pagination->create_links(),
 						'berita'			=> $berita,
 						'popup'				=> $popup,
+						'video_testimoni'	=>$video_testimoni,
 						'galeri'			=> $galeri,
 						'video'				=> $video,
 						'kategori_galeri'	=> $kategori_galeri,

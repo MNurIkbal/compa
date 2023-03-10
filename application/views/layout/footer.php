@@ -140,7 +140,7 @@ $nav_profil     = $this->nav_model->nav_profil();
             <ul class="social-icon-rounded">
                 <li><a href="<?php echo $site->facebook ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                 <li><a href="<?php echo $site->instagram ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                <li><a href="<?php echo $site->twitter ?>"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                <li><a href="<?php echo $site->twitter ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
             </ul>
         </div>
         <!-- .social-box -->

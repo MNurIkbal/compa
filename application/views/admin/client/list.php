@@ -23,13 +23,7 @@ echo form_open(base_url('admin/client/proses'));
     <button class="btn btn-danger" type="submit" name="hapus" onClick="check();" >
       <i class="fa fa-trash-o"></i> Hapus
     </button>
-    <button class="btn btn-primary" type="submit" name="export" onClick="Export();" >
-      <i class="fa fa-file-excel-o"></i> Export Excel (Terpilih)
-    </button>
-
-    <button class="btn btn-info" type="submit" name="exportAll" onClick="Export();" >
-      <i class="fa fa-file-excel-o"></i> Export Excel (Semua)
-    </button>
+   
     
   </div>
 </p>
@@ -75,11 +69,11 @@ echo form_open(base_url('admin/client/proses'));
     <td><?php echo $client->jenis_client ?></td>
     <td>
       <div class="btn-group">
-        <?php if($client->email!="") { ?>
+        <!-- <?php if($client->email!="") { ?>
         <a href="<?php echo base_url('admin/client/approval/'.$client->id_client) ?>" class="btn btn-success btn-sm" onclick="akses(event)"><i class="fa fa-lock"></i> Beri Akses</a>
         <?php }else{ ?>
           <a href="#" class="btn btn-default btn-sm" onclick="akses(event)"><i class="fa fa-lock"></i> Beri Akses</a>
-        <?php } ?>
+        <?php } ?> -->
         <a href="<?php echo base_url('admin/client/up/'.$client->id_client) ?>" class="btn btn-info btn-sm"><i class="fa fa-envelope"></i> Data CP</a>
         <a href="<?php echo base_url('admin/client/edit/'.$client->id_client) ?>" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
         <a href="<?php echo base_url('admin/client/delete/'.$client->id_client) ?>" class="btn btn-danger btn-sm" onclick="confirmation(event)"><i class="fa fa-trash-o"></i></a>

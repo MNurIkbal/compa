@@ -23,13 +23,7 @@ echo form_open(base_url('admin/staff/proses'));
     <button class="btn btn-danger" type="submit" name="hapus" onClick="check();" >
       <i class="fa fa-trash-o"></i> Hapus
     </button>
-    <button class="btn btn-primary" type="submit" name="export" onClick="Export();" >
-      <i class="fa fa-file-excel-o"></i> Export Excel (Terpilih)
-    </button>
-
-    <button class="btn btn-info" type="submit" name="exportAll" onClick="Export();" >
-      <i class="fa fa-file-excel-o"></i> Export Excel (Semua)
-    </button>
+  
     
   </div>
 </p>

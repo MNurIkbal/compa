@@ -21,15 +21,23 @@ class Konfigurasi extends CI_Controller {
 		// Validasi 
 		$this->form_validation->set_rules('namaweb','Website name website','required');
 		$this->form_validation->set_rules('email','Email','valid_email');
+		$testimoni  = $this->db->query("SELECT * FROM vidio_testimoni")->row_array();
 		
 		if($this->form_validation->run() === FALSE) {
-			
 		$data = array(	'title'	=> 'General Configuration',
 						'site'	=> $site,
-						'isi'	=> 'admin/konfigurasi/list');
+						'testimoni'	=>	$testimoni,
+						'isi'	=> 'admin/konfigurasi/list'
+					);
 		$this->load->view('admin/layout/wrapper',$data);
 		}else{
 			$i = $this->input;
+			$video = $i->post('yt');
+			$judul_video = $i->post('nama_yt');
+			$this->db->query("UPDATE vidio_testimoni 
+							SET video = '$video',
+							nama = '$judul_video'
+							");
 			$data = array(	'id_konfigurasi'	=> $i->post('id_konfigurasi'),
 							'namaweb'			=> $i->post('namaweb'),
 							'singkatan'			=> $i->post('singkatan'),
