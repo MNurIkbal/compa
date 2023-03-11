@@ -105,13 +105,6 @@ $config['charset'] = 'UTF-8';
 */
 $config['enable_hooks'] = FALSE;
 
-$config['protocol'] = 'smtp';
-$config['smtp_host'] = 'smtp.gmail.com';
-$config['smtp_port'] = 587;
-$config['smtp_user'] = 'laptopl293@gmail.com';
-$config['smtp_pass'] = 'gmfwutiqkdzlitlv';
-$config['smtp_crypto'] = 'ssl';
-$config['mailtype'] = 'html';
 
 /*
 |--------------------------------------------------------------------------

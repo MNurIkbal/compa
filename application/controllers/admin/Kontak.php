@@ -56,20 +56,6 @@ class Kontak extends CI_Controller {
 		
 	}
 
-	public function send()
-	{
-
-		$this->load->library('email');
-
-        $this->email->from('laptopl293@gmail.com');
-        $this->email->to('laptopl293@gmail.com');
-        $this->email->subject('Email Test');
-        $this->email->message('Testing the email class.');
-		$this->email->send();
-
-
-	}
-
 }
 
 /* End of file Akun.php */
