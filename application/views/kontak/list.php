@@ -1,4 +1,17 @@
 <!-- Start Contact us Section -->
+<style>
+    .con {
+        display: flex;
+    }
+
+    .rows {
+        margin-right: 40px;
+        cursor: pointer;
+        
+    }
+
+
+</style>
 <section class="bg-contact-us">
     <div class="container">
         <div class="row">
@@ -7,9 +20,9 @@
                     <div class="col-md-8">
                         <h3 class="contact-title">HUBUNGI KAMI</h3>
                         <?php $messages = $this->session->flashdata('sukses');
- if(!empty($messages)) : ?>
- <div class="alert alert-success">Data Berhasil Dikirim</div>
- <?php endif; ?>
+                        if (!empty($messages)) : ?>
+                            <div class="alert alert-success">Data Berhasil Dikirim</div>
+                        <?php endif; ?>
                         <form action="<?= base_url("Kontak/kirim"); ?>" method="POST" class="contact-form">
                             <div class="row">
                                 <div class="col-md-6">
@@ -26,11 +39,14 @@
                                 </div>
                                 <!-- .col-md-6 -->
                             </div>
-                            <!-- .row -->
-                            <!-- <div class="form-group">
-                                <input type="text" class="form-control" id="subjectId" name="subject" placeholder="Subject">
-                            </div> -->
                             <textarea class="form-control text-area" rows="3" placeholder="Message" name="pesan" required></textarea>
+                            <br>
+                            <div class="emot">
+                                <h5 style="color: black;">Berikan Penilaian Anda Terhadap Layanan Kami </h4>
+                                <br>
+                                <div class="sharethis-inline-reaction-buttons"></div>
+                            </div>
+                            <br>
                             <button type="submit" class="btn btn-default">Send Email</button>
                         </form>
                     </div>
@@ -55,7 +71,7 @@
                                 <i class="flaticon-message"></i>
                                 <div class="contact-content">
                                     <p><?php echo $site->email; ?></p>
-                                    <!-- <p><?php echo $site->email_cadangan; ?></p> -->
+
                                 </div>
                             </li>
                         </ul>
@@ -85,8 +101,9 @@
     iframe {
         width: 100%;
         height: auto;
-        min-height: 400px;
+        min-height: 600px;
     }
 </style>
 <div id="map"><?php echo $site->google_map; ?></div>
+<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=640bec2be953e4001247aa65&product=inline-reaction-buttons&source=platform" async="async"></script>
 <!-- End Maps Section -->

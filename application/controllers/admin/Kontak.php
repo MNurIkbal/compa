@@ -1,6 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
 
+use PHPMailer\PHPMailer\Exception;
 class Kontak extends CI_Controller {
 
 
@@ -16,6 +19,7 @@ class Kontak extends CI_Controller {
 		$pengalihan 	= $this->session->set_userdata('pengalihan',$url_pengalihan);
 		// Ambil check login dari simple_login
 		$this->simple_login->check_login($pengalihan);
+		
 	
 	}
 
@@ -52,6 +56,38 @@ class Kontak extends CI_Controller {
 		return redirect('admin/kontak');
 
 		
+	}
+
+	public function send()
+	{
+		$config = [
+			'mailtype'	=>	'text',
+			'charset'	=>	'iso-8859-1',
+			'protocol'	=>	'smtp',
+			'smtp_host'	=>	'ssl://smtp.gmail.com',
+			'smtp_user'	=>	'ikbalmnur17@gmail.com',
+			'smtp_pass'	=>	'uukehbmrzyptsaye',
+			'smtp_port'	=>	456
+		];
+		$this->load->library('email',$config);
+		$this->email->initialize($config);
+
+$this->email->from('ahmadviqi59@gmail.com');
+$this->email->to('laptopl293@gmail.com');
+// $this->email->cc('another@another-example.com');
+// $this->email->bcc('them@their-example.com');
+
+$this->email->subject('Email Test');
+$this->email->message('Testing the email class.');
+
+// $this->email->send();
+try {
+    $this->mail->send();
+    echo 'Email berhasil dikirim.';
+} catch (Exception $e) {
+    echo 'Email gagal dikirim: ';
+}
+
 	}
 
 }

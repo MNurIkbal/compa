@@ -137,7 +137,7 @@ $nav_profil     = $this->nav_model->nav_profil();
             <p>&copy; <?php echo date('Y') ?>. <?= $site->namaweb; ?></a></p>
         </div>
         <div class="social-box" >
-            <ul class="social-icon-rounded">
+            <ul class="social-icon-rounded" style="margin-right: 150px;">
                 <li><a href="<?php echo $site->facebook ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                 <li><a href="<?php echo $site->instagram ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                 <li><a href="<?php echo $site->twitter ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
