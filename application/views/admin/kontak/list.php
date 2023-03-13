@@ -35,7 +35,7 @@ echo form_open(base_url('admin/user/proses'));
     <td><?php echo $user->pesan ?></td>
     <td>
       <div class="btn-group">
-        <!-- <a href="<?php echo base_url('admin/Kontak/kirim_email/'.$user->id) ?>" class="btn btn-warning btn-sm"><i class="fa fa-send"></i> Kirim Email</a> -->
+        <a href="<?php echo base_url('admin/Kontak/kirim_email/'.$user->id) ?>" class="btn btn-warning btn-sm"><i class="fa fa-send"></i> Kirim Email</a>
         <a href="<?php echo base_url('admin/Kontak/delete/'.$user->id) ?>" class="btn btn-danger btn-sm" onclick="confirmation(event)"><i class="fa fa-trash-o"></i> Hapus</a>
       </div>
     </td>

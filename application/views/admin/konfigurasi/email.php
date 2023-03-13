@@ -35,8 +35,8 @@ echo validation_errors('<div class="alert alert-success  alert-dismissible"><a h
 <div class="col-md-8">
     
     <div class="form-group">
-    <label>SMTP Timeout</label>
-    <input type="number" name="smtp_timeout" placeholder="SMTP Timeout" value="<?php echo $site->smtp_timeout ?>" class="form-control" required>
+    <label>SMTP Crypto</label>
+    <input type="text" name="smtp_timeout" placeholder="SMTP Crypto" value="<?php echo $site->smtp_timeout ?>" class="form-control" required>
     </div>
     
     
